@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/dracula.css">
+	<title>Alura DEV</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/modal-login.css">
+</head>
+<body>
+    <div class="modal-login" id="modal-login">
+        <div class="container">
+            <form>
+                <h2>Login</h2>
+                <div onclick="cadastroDoCodigoController.fecharLogin()" class="botaoFechar" id="botaoFechar">
+                    <span>x</span>
+                </div>
+                <input class="input-login" type="text" name="nome" id="nome" placeholder="Nome" required>
+                <br>
+                <input class="input-login" type="password" minlength="8" name="senha" id="senha" placeholder="Senha" required>
+                <br>
+                <a href="./cadastroUsuario.html">Nao tem conta ?</a>
+                <br>
+                <input type="submit" id="botaoEnviar" value="Entrar">
+                
+            </form>
+        </div>
+    </div><!--modal-login-->
+
+    <div class="modal-codigo-salvo-com-sucesso"></div>
+    <header>
+        <div class="logo">
+            <img src="imgs/Logo.png">
+        </div> <!--logo-->
+        
+        <div class="input-buscar">
+            <input type="text" id="input-buscar" placeholder="Busque por algo">
+        </div><!--input-buscar-->
+
+        <div class="menu-mobile">
+            <div class="menu-icone">
+                <div class="menu-mobile-aba">
+                    <ul>
+                        <li><a href="index.html">Editor De Codigo</a></li>
+                        <li><a href="communidade.html">Comunidade</a></li>
+                    </ul>
+                </div><!--menu-mobile-aba-->
+            </div><!--menu-icone-->
+        </div><!--menu-mobile-->
+        <div class="clear"></div>
+        <div class="botao-logar-wrapper">
+            <input onclick="cadastroDoCodigoController.abrirLogin()" type="button" id="botaoLogar" value="Login">
+        </div>
+
+        <div class="Usuario" style="display: none;">
+            <img style="background-color: black;">
+            <h2>Nome</h2>
+        </div><!--Usuario-->
+
+        <div class="clear"></div>
+    </header>
+    <section class="main">
+            
+        </div>
+        <div class="menu-esquerda">
+            <h2>M E N U</h2>
+            <ul>
+                <li><div class="icone-li-menu-esquerda EditorDeCodigo"><img src="imgs/Vector.png"></div><a href="index.html">Editor De Codigo</a></li>
+                <li><div class="icone-li-menu-esquerda Comunidade"><img src="imgs/Vector2.png"></div><a href="comunidade.html">Comunidade</a></li>
+            </ul>
+        </div><!--menu-esquerda-->
+
+        <div class="section-area-de-codigo">
+            <div class="Area-de-codigo">
+                <div class="backgroud-Area-de-codigo">
+                    <span style="background-color: #FF5F56;"></span>
+                    <span style="background-color: #FFBD2E;"></span>
+                    <span style="background-color: #27C93F;"></span>
+                    <div class="clear"></div>
+                    <div class="codigo-wrapper" id="codigo-wrapper">
+                        <code class="preview" contenteditable="true" aria-label="editor" required></code>
+                    </div>
+                    <!-- <pre><code class="preview" contenteditable="true"></code></pre> -->
+                    
+                </div><!--backgroud-Area-de-codigo-->
+            </div><!--Area-de-codigo-->
+            
+            <input onclick="cadastroDoCodigoController.aplicarHighlight()" class="botaoVisualizar" id="botaoVisualizar" type="button" value="Visualizar com o Highlight">
+        </div><!--section-area-de-codigo-->
+
+        <div class="section-menu-direita">
+            <div class="seu-projeto">
+                <form id="form-criar-post" onsubmit="cadastroDoCodigoController.adiciona(event)">
+                    <h2>S E U &nbsp; P R O J E T O</h2>
+                    <input type="text" name="nome-do-projeto" id="nome-do-projeto" placeholder="Nome do seu projeto" required>
+                    <input type="text" name="descricao-do-projeto" id="descricao-do-projeto" placeholder="Descrição do seu projeto" required>
+
+                    <h2>P E R S O N A L I Z A Ç Ã O</h2>
+                    
+                    <select id="Linguagem" onchange="cadastroDoCodigoController.selecionarLinguagem()" required>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript" selected>JavaScript</option>
+                    </select>
+                    <input type="button" id="botao-trocar-cor" name="botao-trocar-cor" >
+                    <input type="submit" id="salvar-projeto" name="salvar-projeto" value="Salvar Projeto">
+                </form>
+            </div><!-- seu-projeto -->
+            
+        </div><!--section-menu-direita-->
+    </section><!--main-->
+    
+</body>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script src="js/helper/AbrirFecharLogin.js"></script>
+<script src="./js/main.js"></script>
+<script src="js/controller/CadastroDeCodigoController.js"></script>
+<script src="js/view/View.js"></script>
+<script src="js/view/HighlightView.js"></script>
+<script src="js/model/Codigo.js"></script>
+<script src="js/model/ListaDeCodigo.js"></script>
+<script src="js/mudarCor.js"></script>
+<script src="js/service/ConnectionFactory.js"></script>
+<script src="js/dao/codigoDao.js"></script>
+<script>
+    const cadastroDoCodigoController = new CadastroDeCodigoController();
+</script>
+</html>

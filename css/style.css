@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: #051d3b;
+}
+.clear{
+    clear: both;
+}
+header{
+    padding: 30px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+header .logo{
+    width: 25%;
+}
+
+header .input-buscar{
+    width: 50%;
+}
+
+header .input-buscar > input{
+    background-color: #2d415a;
+    width: 100%;
+    height: 56px;
+    color:#4a5869;
+    border: none;
+    padding-left: 10px;
+    border-radius : 8px;
+    font-size: 16px;
+}
+
+header .botao-logar-wrapper{
+    width: 25%;
+}
+
+.botao-logar-wrapper input#botaoLogar {
+    float: right;
+    color: #112d5a;
+    height: 30px;
+    background-color: white;
+    width: 50px;
+    outline: none;
+    border: navajowhite;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.botao-logar-wrapper input#botaoLogar:hover {
+    background-color: #ccc;
+}
+
+header .Usuario{
+    width: 25%;
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    float: right;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+header .Usuario img{
+    float: left;
+    margin-right: 8px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+header .Usuario h2{
+    color: white;
+    font-weight: 400;
+    float: right;
+    font-size: 16px;
+}
+section.main{
+    display: flex;
+    padding-top: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.menu-esquerda{
+    width: 25%;
+    
+}
+.menu-esquerda li {
+    display: flex;
+    padding: 8px 0;
+    align-items: center;
+    cursor: pointer;
+}
+.icone-li-menu-esquerda{
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    z-index: 1;
+    border-radius: 16px;
+    margin-right: 10px;
+}
+.menu-esquerda h2{
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+}
+.menu-esquerda > ul > li > a{
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.EditorDeCodigo{
+    background-color:#5081fb; 
+    
+}
+.Comunidade{
+    background-color:#112d5a;
+}
+
+.menu-esquerda img{
+    position: relative;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+.section-area-de-codigo{
+    width: 50%;
+}
+
+.Area-de-codigo{
+    width: 100%;
+    min-height: 20em;
+    background-color: #6BD1FF;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+}
+
+.Area-de-codigo .backgroud-Area-de-codigo{
+    width: 100%;
+    background-color: black;
+    height: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    min-height: 20em;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+}
+.backgroud-Area-de-codigo textarea{
+    resize: none;
+    margin-top: 10px;
+    width: 100%;
+    min-height: 20em;
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    border: none;
+}
+
+.backgroud-Area-de-codigo > span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    
+}
+.section-area-de-codigo input[type="button"]{
+    color: white;
+    width: 100%;
+    border: none;
+    height: 56px;
+    margin-top: 32px;
+    background-color: #0b254a;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.section-menu-direita{
+    width: 25%;
+    padding-left: 32px;
+}
+
+.section-menu-direita  h2{
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+.seu-projeto input[type="text"]{
+    margin-top: 8px!important;
+    margin-bottom: 8px!important;
+    background-color: red;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+}
+
+input#nome-do-projeto {
+    height: 56px;
+    width: 100%;
+    background-color: #2d415a;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input#descricao-do-projeto {
+    height: 80px;
+    width: 100%;
+    background-color: #2d415a;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding-bottom: 43px;
+}
+
+
+select#Linguagem {
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    background-color: #2d415A;
+    color: #ccc;
+    padding-left: 5px;
+}
+
+input#botao-trocar-cor {
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    background: #6BD1FF;
+    border: 3px solid white;
+    margin-top: 8px;
+    cursor: pointer;
+}
+input#salvar-projeto {
+    width: 100%;
+    height: 56px;
+    background-color: #5081FB;
+    border: none;
+    color: white;
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input#salvar-projeto:hover{
+    transition: 0.5s;
+    background-color: #376df7;
+}
+
+.section-area-de-codigo input[type="submit"]:hover{
+    background-color: #163a6d;
+    transition: 0.5s;
+} 
+.menu-icone{
+    height: 33px;
+    width: 33px;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+    float: right;
+    background-image: url(../imgs/MenuHamburguer.png);
+    cursor: pointer;
+    background-color: #2d415a;
+    border-radius: 8px;
+}
+
+.menu-icone:hover{
+    background-color: #5081FB;
+}
+.menu-icone:active{
+    background-color: white;
+}
+
+.menu-mobile {
+    display: none;
+    width: 50%;
+}
+.menu-mobile-aba {
+    display: none;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 77px;
+    width: 60vw;
+    height: 80vh;
+}
+
+.menu-mobile-aba li {
+    list-style-type: none;
+    padding: 10px;
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+.menu-mobile-aba ul {
+    text-align: center;
+}
+
+code.preview {
+    display: block;
+    padding: 10px;
+    border-radius: 7px;
+    min-height: 20em;
+    width: 100%;
+    height: 100%;
+    color: white;
+    overflow: auto
+}
+
+@media screen and (max-width: 1024px) {
+    header .Usuario {
+        display: none;
+    }
+    .menu-mobile {
+        display: block;
+        width: 25%;
+    }
+    .menu-esquerda {
+        display: none;
+    }
+    section.main {
+        display: block;
+        
+    }
+    .section-area-de-codigo {
+        width: 100%;
+    }
+    .section-menu-direita {
+        width: 100%;
+        padding-left: 0;
+
+    }
+    .section-menu-direita h2 {
+        margin-top: 40px;
+        
+    }input#salvar-projeto {
+        
+        margin-bottom: 80px;
+        
+    }
+
+    
+}
+
+@media screen and (max-width: 768px){
+    
+    header .logo {
+        width: 50%;
+    }
+    header .input-buscar {
+        display: none;
+    }
+    .menu-mobile {
+        display: block;
+        width: 50%;
+    }
+    
+}

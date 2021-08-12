@@ -1,0 +1,101 @@
+.modal-login{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(181, 184, 189, 0.5);
+    display: none;
+}
+
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: #051d3b;
+    border-radius: 20px;
+    
+}
+
+.container form{
+    padding: 20px;
+    
+}
+
+.botaoFechar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    cursor: pointer;
+}
+.botaoFechar span{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-size: 25px;
+    position: relative;
+    top:-2px
+}
+
+.botaoFechar:hover{
+    background-color: #ccc;
+}
+
+
+.container form h2 {
+    color: white;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.container form .input-login{
+    width: 100%;
+    height: 35px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid white;
+    background-color: #051d3b;
+    color: white;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 8px;    
+}
+
+.container form a{
+    list-style-type: none;
+    text-decoration: none;
+    color: #5081fb;
+
+}
+
+.container form input[type="submit"]{
+    text-align: center;
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #5081fb;
+    left: 50%;
+    position: relative;
+    margin-top: 40px;
+    transform: translateX(-50%);
+}
+
+.container form input[type="submit"]:hover{
+    background-color: #3455aa;
+}
+
