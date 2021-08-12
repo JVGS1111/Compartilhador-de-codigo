@@ -1,11 +1,12 @@
 class Codigo{
-    constructor(nomeDoProjeto, descricao, linguagem, corDaBorda, codigo, data){
+    constructor(nomeDoProjeto, descricao, linguagem, corDaBorda, codigo, data, id="0"){
         this._nomeDoProjeto = nomeDoProjeto;
         this._descricao = descricao;
         this._linguagem = linguagem;
         this._corDaBorda = corDaBorda;
         this._codigo = codigo;
-        this._data = new Date(data)
+        this._data = new Date(data);
+        this._indexDbId = id;
         Object.freeze(this);
     }
 
@@ -31,6 +32,10 @@ class Codigo{
 
     get data(){
         return new Date(this._data);
+    }
+
+    get indexDbId(){
+        return this._indexDbId;
     }
         
     

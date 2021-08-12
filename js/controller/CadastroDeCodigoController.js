@@ -26,6 +26,7 @@ class CadastroDeCodigoController{
         hljs.highlightElement(codigoCache);
         
     }
+    
     adiciona(event){
         event.preventDefault();
         let codigoCadastrado = this.cria();
@@ -37,6 +38,7 @@ class CadastroDeCodigoController{
             .catch((erro) => console.log(erro))
             
     }
+
     cria(){
 
         return new Codigo(

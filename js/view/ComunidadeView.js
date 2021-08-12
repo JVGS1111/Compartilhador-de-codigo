@@ -11,7 +11,7 @@ class ComunidadeView extends View{
 
                 ${arrayDeCodigos.map((c) => {
                
-               return  `<div class="post">
+               return  `<div class="post" data-idPost="${c._indexDbId}">
 
                     <div class="code-wrapper--post">
                         <div class="section-area-de-codigo--comunidade">
@@ -36,8 +36,7 @@ class ComunidadeView extends View{
                             <div class="reacoes">
                                 <img src="./imgs/heart.png" alt="" class="like">
                                 <span class="like-quantidade">0</span>
-                                <img src="./imgs/comentario.png" alt="" class="comentario">
-                                <span class="comentario-qunatidade">0</span>
+                                <span onclick="comunidadeController.excluirPost(event.target)" class="lixeira" id="lixeira"></span>
                             </div>
                             <div class="Usuario--post">
                                 <img style="background-color: black;">
@@ -54,3 +53,6 @@ class ComunidadeView extends View{
     };
          
 }
+
+{/* <img src="./imgs/comentario.png" alt="" class="comentario">
+<span class="comentario-qunatidade">0</span> */}

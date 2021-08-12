@@ -25,7 +25,6 @@
     background-color: #041832;
     position: relative;
     top: -10px;
-    z-index: -1;
     color: white;
 }
 
@@ -78,4 +77,12 @@
 
 .codigos-postados {
     width: 100%;
+}
+
+.lixeira{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    cursor:pointer;
+    border-radius: 25px;
 }

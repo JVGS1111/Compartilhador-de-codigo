@@ -38,11 +38,11 @@ class CodigoDao{
 
             cursor.onsuccess = e => {
                 let postAtual = e.target.result;
-
+                //console.log(typeof(postAtual.key));
                 if(postAtual){
                     let dado = postAtual.value;
 
-                    codigos.push(new Codigo(dado._nomeDoProjeto, dado._descricao, dado._linguagem, dado._corDaBorda, dado._codigo, dado._data))
+                    codigos.push(new Codigo(dado._nomeDoProjeto, dado._descricao, dado._linguagem, dado._corDaBorda, dado._codigo, dado._data, postAtual.key))
 
                     postAtual.continue();
                 }else{
@@ -56,6 +56,27 @@ class CodigoDao{
                 reject('Não foi possível importar os posts')
             }
         })
+    }
+
+    deletar(key){
+        console.log(typeof(key));
+        return Promise((resolve, reject) => {
+            
+            let request = this._connection
+                .transaction([this._store], "readwrite")
+                .objectStore(this._store)
+                .delete('3');
+
+            request.onsuccess = e => {
+                resolve('Post apagado com sucesso')
+            }
+
+            request.onerror = e => {
+                console.log(e.target.error);
+                reject('Erro ao tentar excluir post')
+            }
+        })
+        
     }
 
 }
