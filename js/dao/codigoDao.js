@@ -59,13 +59,13 @@ class CodigoDao{
     }
 
     deletar(key){
-        console.log(typeof(key));
-        return Promise((resolve, reject) => {
+        console.log(key);
+        return new Promise((resolve, reject) => {
             
             let request = this._connection
                 .transaction([this._store], "readwrite")
                 .objectStore(this._store)
-                .delete('3');
+                .delete(key);
 
             request.onsuccess = e => {
                 resolve('Post apagado com sucesso')

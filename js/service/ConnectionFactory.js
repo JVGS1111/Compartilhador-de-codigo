@@ -48,7 +48,7 @@ var ConnectionFactory = (function (){
                 if(connection.objectStoreNames.contains(store)){
                     connection.deleteObjectStore(store);
                 }
-                connection.createObjectStore(store, {autoIncrement: true});
+                connection.createObjectStore(store, {keyPath: "chave", autoIncrement: true});
             });
 
         }

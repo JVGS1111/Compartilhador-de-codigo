@@ -30,5 +30,7 @@ class ComunidadeController{
                 console.log(mensagem),
                 post.remove())
             .catch(erro => console.log(erro))
+
+             
     }
 }
