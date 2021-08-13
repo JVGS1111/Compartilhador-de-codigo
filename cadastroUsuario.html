@@ -11,7 +11,7 @@
 <body>
     <div class="cadastro" id="cadastro">
         <div class="container">
-            <form>
+            <form onsubmit="cadastroUsuarioController.salvarUsuario(event)" id="formularioDeCadastro">
                 <h2>Cadastre-se</h2>
 
                 <input class="input-cadastro" type="text" name="nome" id="nome" placeholder="Nome" required>
@@ -23,5 +23,10 @@
             </form>
         </div>
     </div><!--modal-login-->
+    <script src="js/model/Usuario.js"></script>
+    <script src="js/controller/CadastroUsuarioController.js"></script>
+    <script>
+        let cadastroUsuarioController = new CadastroUsuarioController();
+    </script>
 </body>
 </html>
