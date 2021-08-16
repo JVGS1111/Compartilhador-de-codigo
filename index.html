@@ -11,25 +11,7 @@
     <link rel="stylesheet" href="/css/modal-login.css">
 </head>
 <body>
-    <div class="modal-login" id="modal-login">
-        <div class="container">
-            <form>
-                <h2>Login</h2>
-                <div onclick="cadastroDoCodigoController.fecharLogin()" class="botaoFechar" id="botaoFechar">
-                    <span>x</span>
-                </div>
-                <input class="input-login" type="text" name="nome" id="nome" placeholder="Nome" required>
-                <br>
-                <input class="input-login" type="password" minlength="8" name="senha" id="senha" placeholder="Senha" required>
-                <br>
-                <a href="./cadastroUsuario.html">Nao tem conta ?</a>
-                <br>
-                <input type="submit" id="botaoEnviar" value="Entrar">
-                
-            </form>
-        </div>
-    </div><!--modal-login-->
-
+   
     <div class="modal-codigo-salvo-com-sucesso"></div>
     <header>
         <div class="logo">
@@ -41,7 +23,7 @@
         </div><!--input-buscar-->
 
         <div class="menu-mobile">
-            <div class="menu-icone">
+            <div class="menu-icone" onclick="cadastroDoCodigoController.abrirMenu()">
                 <div class="menu-mobile-aba">
                     <ul>
                         <li><a href="index.html">Editor De Codigo</a></li>
@@ -114,6 +96,7 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 <script src="js/controller/CadastroDeCodigoController.js"></script>
+<script src="js/helper/abrirMenu.js"></script>
 <script src="js/view/View.js"></script>
 <script src="js/view/HighlightView.js"></script>
 <script src="js/model/Codigo.js"></script>

@@ -5,6 +5,8 @@ class ComunidadeController{
         this._codigosWrapper = document.querySelector('#codigos-wrapper');
         this._localDosPosts = document.querySelector('.codigos-postados');
 
+        this._menu = document.querySelector('.menu-mobile-aba');
+
     }
 
     listaPosts(){
@@ -28,6 +30,10 @@ class ComunidadeController{
         })
         
         
+    }
+
+    abrirMenu(){
+        AbrirMenu.abrirMenu(this._menu);
     }
 
     excluirPost(target){

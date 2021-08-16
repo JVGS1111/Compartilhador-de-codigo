@@ -23,7 +23,7 @@
         </div><!--input-buscar-->
 
         <div class="menu-mobile">
-            <div class="menu-icone">
+            <div onclick="comunidadeController.abrirMenu()" class="menu-icone">
                 <div class="menu-mobile-aba">
                     <ul>
                         <li><a href="index.html">Editor De Codigo</a></li>
@@ -57,8 +57,8 @@
     
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<script src="js/controller/CadastroDeCodigoController.js"></script>
 <script src="js/controller/ComunidadeController.js"></script>
+<script src="js/helper/abrirMenu.js"></script>
 <script src="js/view/View.js"></script>
 <script src="js/view/HighlightView.js"></script>
 <script src="js/model/Codigo.js"></script>
@@ -71,7 +71,7 @@
     
     setTimeout(()=>{
         comunidadeController.listaPosts();
-
+        
         
     },500)
 </script>

@@ -11,8 +11,11 @@ class CadastroDeCodigoController{
         this._listaDeCodigos = new ListaDeCodigo();
         this._highlightView = new HighLightView();
 
-        this._modalLogin = document.querySelector('#modal-login')
+        this._menu = document.querySelector('.menu-mobile-aba');
+
+    
     }
+
 
     selecionarLinguagem(){
         
@@ -20,7 +23,10 @@ class CadastroDeCodigoController{
         this._highlightView.highLightUpdate(model, this._codigoWrapper);
         
     }
-
+    abrirMenu(){
+        AbrirMenu.abrirMenu(this._menu);
+    }
+    
     aplicarHighlight(){
         let codigoCache =  this._codigoWrapper.querySelector('code');
         hljs.highlightElement(codigoCache);
@@ -51,12 +57,5 @@ class CadastroDeCodigoController{
         )
     }
 
-    abrirLogin(){
-        this._modalLogin.style = "display: block"
-    }
-
-    fecharLogin(){
-        this._modalLogin.style = "display: none"
-    }
 
 }
