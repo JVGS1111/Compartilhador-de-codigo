@@ -4,7 +4,6 @@ class ComunidadeView extends View{
     }
 
     model(arrayDeCodigos){
-        //preciso criar um map que adicione varios post em uma unica tag
         
             return `
             <div class="codigos-postados" id="codigos-postados">
@@ -22,7 +21,7 @@ class ComunidadeView extends View{
                                     <span style="background-color: #27C93F;"></span>
                                     <div class="clear"></div>
                                     <div class="codigo-wrapper" id="codigo-wrapper">
-                                        <code onchange="hljs.highlightElement(event.innerHTML)" class="preview hljs ${c._linguagem}" contenteditable="false" aria-label="editor">${c._codigo}</code>
+                                        <code class="preview hljs ${c._linguagem}" contenteditable="false" aria-label="editor">${c._codigo}</code>
                                     </div>
                                 </div><!--backgroud-Area-de-codigo-->
                             </div><!--Area-de-codigo-->
@@ -36,6 +35,8 @@ class ComunidadeView extends View{
                             <div class="reacoes">
                                 <img src="./imgs/heart.png" alt="" class="like">
                                 <span class="like-quantidade">0</span>
+                                <img src="./imgs/comentario.png" alt="" class="comentario">
+                                <span class="comentario-qunatidade">0</span>
                                 <span onclick="comunidadeController.excluirPost(event.target)" class="lixeira" id="lixeira"></span>
                             </div>
                             <div class="Usuario--post">
@@ -54,5 +55,3 @@ class ComunidadeView extends View{
          
 }
 
-{/* <img src="./imgs/comentario.png" alt="" class="comentario">
-<span class="comentario-qunatidade">0</span> */}

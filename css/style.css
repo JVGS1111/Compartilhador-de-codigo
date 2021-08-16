@@ -69,9 +69,13 @@ header .Usuario{
 header .Usuario img{
     float: left;
     margin-right: 8px;
-    height: 32px;
-    width: 32px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
+    background-image: url(./imgs/user.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header .Usuario h2{
     color: white;

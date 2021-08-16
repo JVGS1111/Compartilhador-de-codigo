@@ -33,9 +33,9 @@
             </div><!--menu-icone-->
         </div><!--menu-mobile-->
         <div class="clear"></div>
-        <div class="Usuario" style="display: none;">
-            <img style="background-color: black;">
-            <h2>Nome</h2>
+        <div class="Usuario" >
+            <img style="background-image: url(./imgs/user.png);">
+            <h2>Guerber</h2>
         </div><!--Usuario-->
         <div class="clear"></div>
     </header>
@@ -44,7 +44,7 @@
         <div class="menu-esquerda">
             <h2>M E N U</h2>
             <ul>
-                <li><div class="icone-li-menu-esquerda EditorDeCodigo"><img src="imgs/Vector.png"></div><a href="index.html">Editor De Codigo</a></li>
+                <li><div class="icone-li-menu-esquerda EditorDeCodigo"><img onclick="window.location.href = 'index.html'" src="imgs/Vector.png"></div><a href="index.html">Editor De Codigo</a></li>
                 <li><div class="icone-li-menu-esquerda Comunidade"><img src="imgs/Vector2.png"></div><a href="comunidade.html">Comunidade</a></li>
             </ul>
         </div><!--menu-esquerda-->
@@ -57,8 +57,6 @@
     
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<script src="./js/main.js"></script>
-<script src="js/model/Usuario.js"></script>
 <script src="js/controller/CadastroDeCodigoController.js"></script>
 <script src="js/controller/ComunidadeController.js"></script>
 <script src="js/view/View.js"></script>
@@ -73,6 +71,8 @@
     
     setTimeout(()=>{
         comunidadeController.listaPosts();
+
+        
     },500)
 </script>
 </html>

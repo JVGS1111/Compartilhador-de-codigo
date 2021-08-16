@@ -3,7 +3,7 @@ class ComunidadeController{
 
         this._comunidadeView = new ComunidadeView();
         this._codigosWrapper = document.querySelector('#codigos-wrapper');
-        this._localDosPosts = document.querySelector('#codigos-postados');
+        this._localDosPosts = document.querySelector('.codigos-postados');
 
     }
 
@@ -16,7 +16,18 @@ class ComunidadeController{
                  this._comunidadeView.model(posts)
             ).then(model => 
                 this._comunidadeView.update(model, this._codigosWrapper)
-            ).catch(erro => console.log(erro))
+            ).then(() => this.aplicarHighlight())
+                .catch(erro => console.log(erro))
+    }
+
+    aplicarHighlight(){
+        let codigoCache =  this._localDosPosts.querySelectorAll('code');
+        console.log(codigoCache);
+        codigoCache.forEach(tag => {
+            hljs.highlightElement(tag);
+        })
+        
+        
     }
 
     excluirPost(target){

@@ -18,6 +18,13 @@
 .section-area-de-codigo--comunidade{
     width: 100%;
 }
+.EditorDeCodigo {
+    background-color: #112d5a;
+}
+
+.Comunidade {
+    background-color: #5081fb;
+}
 
 .code-info{
     width: 100%;
@@ -80,9 +87,12 @@
 }
 
 .lixeira{
-    height: 50px;
-    width: 50px;
-    background-color: white;
+    margin-left: 10px;
+    height: 35px;
+    width: 30px;
     cursor:pointer;
-    border-radius: 25px;
+    background-image: url(../imgs/lixeira.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

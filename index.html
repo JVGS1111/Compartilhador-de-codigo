@@ -51,13 +51,11 @@
             </div><!--menu-icone-->
         </div><!--menu-mobile-->
         <div class="clear"></div>
-        <div class="botao-logar-wrapper">
-            <input onclick="cadastroDoCodigoController.abrirLogin()" type="button" id="botaoLogar" value="Login">
-        </div>
 
-        <div class="Usuario" style="display: none;">
-            <img style="background-color: black;">
-            <h2>Nome</h2>
+
+        <div class="Usuario">
+            <img style="background-image: url(./imgs/user.png);">
+            <h2>Guerber</h2>
         </div><!--Usuario-->
 
         <div class="clear"></div>
@@ -68,8 +66,8 @@
         <div class="menu-esquerda">
             <h2>M E N U</h2>
             <ul>
-                <li><div class="icone-li-menu-esquerda EditorDeCodigo"><img src="imgs/Vector.png"></div><a href="index.html">Editor De Codigo</a></li>
-                <li><div class="icone-li-menu-esquerda Comunidade"><img src="imgs/Vector2.png"></div><a href="comunidade.html">Comunidade</a></li>
+                <li><div class="icone-li-menu-esquerda EditorDeCodigo"><img onclick="window.location.href = 'index.html'" src="imgs/Vector.png"></div><a href="index.html">Editor De Codigo</a></li>
+                <li><div class="icone-li-menu-esquerda Comunidade"><img onclick="window.location.href = 'comunidade.html'" src="imgs/Vector2.png"></div><a href="comunidade.html">Comunidade</a></li>
             </ul>
         </div><!--menu-esquerda-->
 
@@ -83,7 +81,6 @@
                     <div class="codigo-wrapper" id="codigo-wrapper">
                         <code class="preview" contenteditable="true" aria-label="editor" required></code>
                     </div>
-                    <!-- <pre><code class="preview" contenteditable="true"></code></pre> -->
                     
                 </div><!--backgroud-Area-de-codigo-->
             </div><!--Area-de-codigo-->
@@ -116,13 +113,11 @@
 </body>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<script src="./js/main.js"></script>
 <script src="js/controller/CadastroDeCodigoController.js"></script>
 <script src="js/view/View.js"></script>
 <script src="js/view/HighlightView.js"></script>
 <script src="js/model/Codigo.js"></script>
 <script src="js/model/ListaDeCodigo.js"></script>
-<script src="js/model/Usuario.js"></script>
 <script src="js/mudarCor.js"></script>
 <script src="js/service/ConnectionFactory.js"></script>
 <script src="js/dao/codigoDao.js"></script>
