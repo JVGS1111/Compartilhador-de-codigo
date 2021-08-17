@@ -11,14 +11,10 @@
     <link rel="stylesheet" href="/css/modal-mensagem-codigo-salvo.css">
 </head>
 <body>
-   
-    <div class="modal-codigo-salvo-com-sucesso">
-        <div class="mensagem">
-            <div class="botaoFechar"><span>x</span></div>
-            <h2>Post Criado!</h2>
-            <p>Seu codigo está salvo na área de Comunidade</p>
-        </div>
-    </div>
+   <div class="mensagem-area">
+        
+   </div>
+    
     <header>
         <div class="logo" style="width: 50%;">
             <img src="imgs/Logo.png">
@@ -87,7 +83,7 @@
                         <option value="CSS">CSS</option>
                         <option value="JavaScript" selected>JavaScript</option>
                     </select>
-                    <input type="button" id="botao-trocar-cor" name="botao-trocar-cor" >
+                    <input onclick="cadastroDoCodigoController.mudarCorDaBorda()" type="button" id="botao-trocar-cor" name="botao-trocar-cor" >
                     <input type="submit" id="salvar-projeto" name="salvar-projeto" value="Salvar Projeto">
                 </form>
             </div><!-- seu-projeto -->
@@ -98,15 +94,18 @@
 </body>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
 <script src="js/controller/CadastroDeCodigoController.js"></script>
-<script src="js/helper/abrirMenu.js"></script>
+<script src="js/helper/AbrirMenu.js"></script>
 <script src="js/view/View.js"></script>
 <script src="js/view/HighlightView.js"></script>
+<script src="js/view/MensagemView.js"></script>
 <script src="js/model/Codigo.js"></script>
 <script src="js/model/ListaDeCodigo.js"></script>
-<script src="js/mudarCor.js"></script>
+
 <script src="js/service/ConnectionFactory.js"></script>
 <script src="js/dao/codigoDao.js"></script>
+
 <script>
     const cadastroDoCodigoController = new CadastroDeCodigoController();
 </script>

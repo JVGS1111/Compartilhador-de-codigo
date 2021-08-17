@@ -1,7 +1,6 @@
 
 var AbrirMenu = (function AbrirMenu(){
     let estaAberto = false;
-
     return class AbrirMenu {
 
         constructor(){
@@ -19,6 +18,10 @@ var AbrirMenu = (function AbrirMenu(){
                 estaAberto = false;
             }
     
+        }
+
+        static FecharModal(input){
+            input.firstChild.remove();
         }
     }
 })()
