@@ -19,7 +19,7 @@
         </div> <!--logo-->
         
         <div class="input-buscar">
-            <input type="text" id="input-buscar" placeholder="Busque por algo">
+            <input oninput="comunidadeController.buscarPost(event.target.value)" type="text" id="input-buscar" placeholder="Busque por algo">
         </div><!--input-buscar-->
 
         <div class="menu-mobile">
@@ -69,10 +69,10 @@
 <script>
     const comunidadeController = new ComunidadeController();
     
-    setTimeout(()=>{
-        comunidadeController.listaPosts();
+    
+    comunidadeController.listaPosts();
         
         
-    },500)
+   
 </script>
 </html>
