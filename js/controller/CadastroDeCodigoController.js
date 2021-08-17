@@ -6,7 +6,7 @@ class CadastroDeCodigoController{
         this._descricao = document.querySelector('#descricao-do-projeto');
         this._seletorDeLinguagem = document.querySelector('#Linguagem');
         this._borda = document.querySelector('.Area-de-codigo');
-        this._codigo = this._codigoWrapper.querySelector('code');
+    
         this._botaoTrocarCor = document.querySelector('#botao-trocar-cor');
 
         this._listaDeCodigos = new ListaDeCodigo();
@@ -66,13 +66,13 @@ class CadastroDeCodigoController{
     }
 
     cria(){
-
+        console.log(this._codigoWrapper.querySelector('code').innerHTML);
         return new Codigo(
             this._nomeDoProjeto.value,
             this._descricao.value,
             this._seletorDeLinguagem.value,
             this._borda.style.backgroundColor,
-            this._codigo.innerHTML,
+            this._codigoWrapper.querySelector('code').innerHTML,
             new Date()
         )
     }
@@ -80,7 +80,6 @@ class CadastroDeCodigoController{
     _limparCampos(){
         this._nomeDoProjeto.value = '',
         this._descricao.value = '',
-        this._seletorDeLinguagem.value = 'JavaScript',
         this._borda.style.backgroundColor = '#6BD1FF',
         this._botaoTrocarCor.style.backgroundColor = '#6BD1FF';
     }
