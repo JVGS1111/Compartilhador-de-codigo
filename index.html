@@ -8,19 +8,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/modal-login.css">
+    <link rel="stylesheet" href="/css/modal-mensagem-codigo-salvo.css">
 </head>
 <body>
    
-    <div class="modal-codigo-salvo-com-sucesso"></div>
+    <div class="modal-codigo-salvo-com-sucesso">
+        <div class="mensagem">
+            <div class="botaoFechar"><span>x</span></div>
+            <h2>Post Criado!</h2>
+            <p>Seu codigo está salvo na área de Comunidade</p>
+        </div>
+    </div>
     <header>
-        <div class="logo">
+        <div class="logo" style="width: 50%;">
             <img src="imgs/Logo.png">
         </div> <!--logo-->
         
-        <div class="input-buscar">
-            <input type="text" id="input-buscar" placeholder="Busque por algo">
-        </div><!--input-buscar-->
 
         <div class="menu-mobile">
             <div class="menu-icone" onclick="cadastroDoCodigoController.abrirMenu()">
@@ -35,7 +38,7 @@
         <div class="clear"></div>
 
 
-        <div class="Usuario">
+        <div class="Usuario" style="width: 50%;">
             <img style="background-image: url(./imgs/user.png);">
             <h2>Guerber</h2>
         </div><!--Usuario-->
