@@ -11,13 +11,16 @@ var AbrirMenu = (function AbrirMenu(){
             
             
             if(!estaAberto){
-                input.style = "display: block";
+                input.classList.remove("menu-mobile-aba--desativar");
+                input.classList.add("menu-mobile-aba--ativo");
                 estaAberto = true;
             }else{
-                input.style = "display: none";
+                //input.style = "display: none";
+                input.classList.remove("menu-mobile-aba--ativo");
+                input.classList.add("menu-mobile-aba--desativar");
                 estaAberto = false;
             }
-    
+            
         }
 
         static FecharModal(input){

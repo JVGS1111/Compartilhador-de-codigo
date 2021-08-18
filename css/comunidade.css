@@ -9,6 +9,24 @@
     width: 70%;
 }
 
+input#input-buscar {
+    background-color: #2d415a;
+    width: 100%;
+    height: 56px;
+    color: #4a5869;
+    border: none;
+    padding-left: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+}
+.input-buscar{
+    width: 55% !important;
+}
+.input-buscar--mobile {
+    display: none;
+
+}
 .post {
     width: 50%;
     float: left;
@@ -100,3 +118,36 @@
 .invisivel{
     display: none;
 }
+@media screen and (max-width: 1024px) {
+
+    .menu-mobile {
+        display: block;
+        width: 25% !important;
+    }
+
+}
+@media screen and (max-width: 768px) {
+
+    .menu-mobile {
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .post {
+        width: 100%;
+        float: none;
+        padding: 2%;
+    }
+
+    .menu-mobile {
+        width: 50% !important;
+    }
+
+    .input-buscar--mobile {
+        display: block;
+        padding: 2%;
+    }
+}
+
+
